@@ -12,4 +12,4 @@ async def on_message(message):
         print(f"Received DM from {message.author}: {message.content}")
 
 Token = input("Token:")
-clien.run(Token)
+client.run(Token)
