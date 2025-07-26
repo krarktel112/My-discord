@@ -10,3 +10,4 @@ async def on_message(message):
     if isinstance(message.channel, discord.DMChannel):
         # This message was sent in a DM
         print(f"Received DM from {message.author}: {message.content}")
+MTM5ODY4MzUxMDY2Mjc2MjU2Nw.GSYtIA.T-6naWzrgvtsmoJb985Px2W05XF6Ki82AbVIUs
