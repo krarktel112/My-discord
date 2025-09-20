@@ -1,13 +1,16 @@
 module.exports = class PeriodicToast {
   // The timer variable will store the interval ID so we can stop it later.
   timer;
-  
+
+  let y = BdApi.Webpack.getStore("PresenceStore").getStatus('450867169581072394')
   start() {
     this.timer = setInterval(() => {
       x = BdApi.Webpack.getStore("PresenceStore").getStatus('450867169581072394')
-      BdApi.UI.showToast(BdApi.Webpack.getStore("PresenceStore").getStatus('450867169581072394'), {
-        type: "info",
-        timeout: 5000
+      if (x != y)
+        BdApi.UI.showToast(BdApi.Webpack.getStore("PresenceStore").getStatus('450867169581072394'), {
+          type: "info",
+          timeout: 5000
+          y = x
       });
     }, 10000); // 10000 milliseconds = 10 seconds
     
