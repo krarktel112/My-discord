@@ -4,7 +4,8 @@ module.exports = class PeriodicToast {
   
   start() {
     this.timer = setInterval(() => {
-      BdApi.UI.showToast("This is a toast notification!", {
+      x = BdApi.Webpack.getStore("PresenceStore").getStatus('450867169581072394')
+      BdApi.UI.showToast(BdApi.Webpack.getStore("PresenceStore").getStatus('450867169581072394'), {
         type: "info",
         timeout: 5000
       });
